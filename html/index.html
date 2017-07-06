@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300|Montserrat:500|Montserrat:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="header">HEADER</h1>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section>
+        <section class="property-container">
+            <h1 class="header text-center"> PROPERTY DETAILS</h1>
+            <div>
+                <div>
+                    <p class="price-label">$639,000</p>
+                    <span class="light-text"> 5420 Countryside Road, Edina, MN 55436</span>
+                </div>
+                <div>
+                    <div class="display-inline-block">
+                        <img src="https://cdn.cbhomes.com/s3/mediasvc-prd/properties/D3f26b84bb2d45C-4826692.jpg?preset=lmain" alt="LMain">
+                    </div>
+                    <div class="desc">
+                        <div class="left">
+                            <p class="bold-text">Bedrooms: &nbsp;&nbsp;&nbsp;<span class="light-text">4</span></p>
+                            <p class="bold-text">Bathrooms: &nbsp;&nbsp;<span class="light-text">3</span></p>
+                        </div>
+                        <div class="left verticle-divider"></div>
+                        <div class="left">
+                            <p class="bold-text">Taxes: &nbsp;&nbsp;&nbsp;<span class="light-text">$17,000</span></p>
+                            <p class="bold-text">Status: &nbsp;&nbsp;<span class="light-text">Active</span></p>
+                            <p class="bold-text">Type: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light-text">Single - Fmaily House</span></p>
+                            <p class="bold-text">Added: &nbsp;&nbsp;<span class="light-text">April 18, 2017</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <div>
+                    <p class="price-label">$639,000</p>
+                    <span class="light-text"> 5420 Countryside Road, Edina, MN 55436</span>
+                </div>
+                <div>
+                    <div class="display-inline-block">
+                        <img src="https://cdn.cbhomes.com/s3/mediasvc-prd/properties/Dd488809d60a4d9-4813192.jpg?preset=lmain" alt="LMain">
+                    </div>
+                    <div class="desc">
+                        <div class="left">
+                            <p class="bold-text">Bedrooms:&nbsp;&nbsp;&nbsp; <span class="light-text">5</span></p>
+                            <p class="bold-text">Bathrooms: &nbsp;&nbsp;<span class="light-text">3</span></p>
+                        </div>
+                        <div class="left verticle-divider"></div>
+                        <div class="left">
+                            <p class="bold-text">Taxes: &nbsp;&nbsp;&nbsp;<span class="light-text">$23,000</span></p>
+                            <p class="bold-text">Status: &nbsp;&nbsp;<span class="light-text">Active</span></p>
+                            <p class="bold-text">Type: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light-text">Single - Fmaily House</span></p>
+                            <p class="bold-text">Added: &nbsp;&nbsp;<span class="light-text">January 1, 2016</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <div>
+                    <p class="price-label">$639,000</p>
+                    <span class="light-text"> 5420 Countryside Road, Edina, MN 55436</span>
+                </div>
+                <div>
+                    <div class="display-inline-block">
+                        <img src="https://cdn.cbhomes.com/s3/mediasvc-prd/properties/f841597a433B479-4796453.jpg?preset=lmain" alt="LMain">
+                    </div>
+                    <div class="desc">
+                        <div class="left">
+                            <p class="bold-text">Bedrooms: &nbsp;&nbsp;&nbsp;<span class="light-text">4</span></p>
+                            <p class="bold-text">Bathrooms: &nbsp;&nbsp;<span class="light-text">2</span></p>
+                        </div>
+                        <div class="left verticle-divider"></div>
+                        <div class="left">
+                            <p class="bold-text">Taxes: &nbsp;&nbsp;&nbsp;<span class="light-text">$9,000</span></p>
+                            <p class="bold-text">Status: &nbsp;&nbsp;<span class="light-text">Active</span></p>
+                            <p class="bold-text">Type: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="light-text">Single - Fmaily House</span></p>
+                            <p class="bold-text">Added: &nbsp;&nbsp;<span class="light-text">May 8, 2017</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </section>
+        <section ng-controller="weatherController as wc">
+            <div class="weather-container">
+                <h1 class="header">WEATHER</h1>
+                <div>
+                    <input class="text-box" type="text" placeholder="Zip code" ng-model="wc.weather.zipCode">
+                    <button class="btn" ng-click="wc.getWeatherReport()">SUBMIT</button>
+                </div>
+            </div>
+        </section>
+        <section ng-controller="appointmentController as ac">
+            <div class="appointment-container">
+                <h1 class="header">SCHEDULE APPOINTMENT</h1>
+                <div ng-hide="ac.isValidAppointment">
+                    <div class="left">
+                        <div>
+                            <input id="firstName" class="text-box" type="text" placeholder="Frist Name" ng-model="ac.appointment.firstName">
+                            <input id="lastName" class="text-box" type="text" placeholder="Last Name" ng-model="ac.appointment.lastName">
+                        </div>
+                        <div>
+                            <input id="email" class="text-box" type="text" placeholder="E-mail" ng-model="ac.appointment.email">
+                            <input id="date" class="text-box" type="date" placeholder="Date" ng-model="ac.appointment.date">
+                        </div>
+                    </div>
+                    <div class="left">
+                        <button class="btn" ng-click="ac.scheduleAppointment()">SUBMIT</button>
+                    </div>
+                </div>
+                <div class="thank-you" ng-show="ac.isValidAppointment">
+                    <p>Thank you!</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="text-center">
+        <h1 class="header">FOOTER</h1>
+    </footer>
+    <script src="../javascript/jquery-3.2.1.min.js"></script>
+    <script src="../angular/angular.min.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/appointments.js"></script>
+    <script src="../javascript/weather.js"></script>
+    <script src="../javascript/service.js"></script>
+</body>
+
+</html>
